@@ -8,4 +8,4 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ### Site URL
 
-Site URL: [Interactive rating component](https://apocode01-interactive-rating-component.netlify.app/)
+[Interactive rating component](https://apocode01-interactive-rating.netlify.app/)
