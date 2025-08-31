@@ -34,7 +34,7 @@ body {
     background-color: var(--grey925);
     border-radius: 2rem;
     gap: 1.5rem;
-    max-width: 23rem;
+    max-width: 27rem;
 }
 
 .icon {
@@ -75,8 +75,8 @@ body {
 
 .ratingBtn {
     aspect-ratio: 1 / 1;
-    width: 3rem;
-    height: 3rem;
+    width: 3.7rem;
+    height: 3.7rem;
     border-radius: 50%;
     border: none;
     font-family: "Overpass", sans-serif;
@@ -121,4 +121,26 @@ body {
 
 .attribution a { 
     color: var(--orange500); 
+}
+
+@media only screen and (max-width: 35rem) {
+    .ratingStateContainer {
+        max-width: 23rem;
+    }
+
+    .ratingBtn {
+        width: 3.1rem;
+        height: 3.1rem;
+    }
+}
+
+@media only screen and (max-width: 24rem) {
+    .ratingStateContainer {
+        padding: 1rem;
+    }
+
+    .ratingBtn {
+        width: 2.7rem;
+        height: 2.7rem;
+    }
 }
