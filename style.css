@@ -30,6 +30,7 @@ body {
 .ratingStateContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 1.5rem;
     background-color: var(--grey925);
     border-radius: 2rem;
@@ -89,6 +90,11 @@ body {
 }
 
 .ratingBtn:hover {
+    background-color: var(--orange500);
+    color: var(--grey950);
+}
+
+.ratingBtn.active {
     background-color: var(--white);
     color: var(--grey950);
 }
@@ -102,14 +108,47 @@ body {
     font-family: "Overpass", sans-serif;
     font-weight: 700;
     font-size: clamp(1rem, 0.188vw + 0.962rem, 1.188rem);
-    cursor: pointer;
+    cursor: default;
+    pointer-events: none;
     background-color: var(--orange500);
     color: var(--grey950);
     transition: all 0.3s ease;
 }
 
-.submitBtn:hover {
+.submitBtn.active {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.submitBtn.active:hover {
     background-color: var(--white);
+}
+
+.ratingStateContainer, .thankyouStateContainer {
+    height: 25.75rem;
+}
+
+.thankyouStateContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--grey925);
+    border-radius: 2rem;
+    gap: 1.5rem;
+    max-width: 27rem;
+}
+
+.ratingDiv {
+    background-color: var(--grey900);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+
+.ratingMessage {
+    color: var(--orange500);
 }
 
 .attribution { 
@@ -124,8 +163,9 @@ body {
 }
 
 @media only screen and (max-width: 35rem) {
-    .ratingStateContainer {
+    .ratingStateContainer, .thankyouStateContainer {
         max-width: 23rem;
+        height: 24.125rem;
     }
 
     .ratingBtn {
@@ -135,7 +175,7 @@ body {
 }
 
 @media only screen and (max-width: 24rem) {
-    .ratingStateContainer {
+    .ratingStateContainer, .thankyouStateContainer {
         padding: 1rem;
     }
 
